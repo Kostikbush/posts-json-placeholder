@@ -67,7 +67,7 @@ export function upDatePost(title, body, id){
             },
           })
             .then((res) => res.json())
-            .then((data) => {return console.log(data), dispatch({type: UPDATE_POST, payload: data})})
+            .then((data) => {return dispatch({type: UPDATE_POST, payload: data})})
             
         
     }catch(error){

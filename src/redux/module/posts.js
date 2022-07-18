@@ -7,7 +7,6 @@ const defaultState = {
 }
 
 const postsReducer = (state = defaultState, action) => {
-    console.log(state, action)
     switch (action.type){
         case GET_POSTS:
             const newPosts = action.payload.map(post => {
@@ -28,7 +27,6 @@ const postsReducer = (state = defaultState, action) => {
                 posts: [action.payload, ...state.posts]
             }
         case UPDATE_POST: 
-        console.log(action.payload)
             const itemIndex = state.posts.findIndex(res => res.id === action.payload.id);
             const newtPosts = [
                 ...state.posts.slice(0, itemIndex),

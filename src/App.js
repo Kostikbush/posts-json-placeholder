@@ -8,7 +8,6 @@ import { TransitionGroup,CSSTransition } from 'react-transition-group';
 import CreatePost from './Components/Create-post';
 function App() {
   const posts = useSelector(state => state.postsReducer.posts);
-  console.log(posts)
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts());
